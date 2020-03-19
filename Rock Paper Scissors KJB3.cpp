@@ -10,7 +10,7 @@ int main()
 	int playerpoints = 0;
 	int aipoints = 0;
 	vector<int>aimoves = { 3,1,3,2,3,3,1,2,2,3,1,2,1,3,2,1,1,3,3,3,3,1,2,3,1,1,2,2,3,1,1,3,2,3,1 };
-	cout << "Let's play Rock Paper Scissors, my dude! Press 1 for Rock, 2 for Paper, and 3 for Scissors, followed by Enter. You can play for up to 35 turns.\n";
+	cout << "Let's play Rock Paper Scissors! Press 1 for Rock, 2 for Paper, and 3 for Scissors, followed by Enter. You can play for up to 35 turns, after which the game will end.\n";
 	while (cin >> playermove && movecount < 35)
 	{
 		switch (playermove) {
@@ -76,7 +76,9 @@ int main()
 				cout << "That's the end of the game! You win! :)";
 			else if (aipoints > playerpoints)
 				cout << "That's the end of the game! You lose :(";
-		}
+			else if (aipoints == playerpoints)
+				cout << "That's the end of the game! You and the CPU tied!";
+				}
 
 	}
 }
